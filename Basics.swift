@@ -1,5 +1,6 @@
 import Foundation
 
+
 // Task 1
 // Write a Swift program to compute the sum of the two integers. 
 //If the values are equal return the triple their sum
