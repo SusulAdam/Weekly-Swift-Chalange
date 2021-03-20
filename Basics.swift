@@ -59,7 +59,8 @@ func take_two_characters(word: String) -> String {
 
 print("Task 4", take_two_characters(word: "D"))
 
-// Task 5 Write a Swift program that return true if either of two given integers
+// Task 5 
+//Write a Swift program that return true if either of two given integers
 // is in the range 10..30 inclusive
 
 func value_in_range(firstValue: Int, secondValue: Int) -> Bool {
@@ -76,10 +77,51 @@ func value_in_range(firstValue: Int, secondValue: Int) -> Bool {
 
 print("Task 5", value_in_range(firstValue: 1, secondValue: 40))
 
+// Task 6
+// Write a Swift program to find the largest number among three given integers.
+
+func largest_number(firstValue: Int, secondValue: Int, thirdValue: Int) -> Int {
+
+    let numbers = max(firstValue, secondValue, thirdValue)
+    return numbers
+
+}
+
+print("Task 6", largest_number(firstValue: 10, secondValue: 5, thirdValue: 15))
 
 
+// Task 7
+// Write a Swift program to convert the last three characters in upper case.
+// If the string has less than 3 chars, lowercase whatever is there
 
+func convert_character(character: String) -> String {
 
+    if character.count<4{
+        return character.lowercased()
+    }
+    let converLastThree = character.suffix(3).uppercased()
+    var newInput = character
+    newInput.removeLast(3)
+    return newInput + converLastThree
+}
 
+print("Task 7", convert_character(character: "adam"))
 
+// Task 8
+//Write a Swift program to check if one of the first 4 elements in a given array of integers is a 7.
+//The length of the array may be less than 4.
 
+func check_number(_ arr: [Int]) -> Bool {
+
+    guard arr.count > 3 else {
+        return false
+    }
+
+     if arr.prefix(4).contains(7) {
+        return true
+    }
+    return false
+}
+
+print("Task 8", check_number([5,6,5,6,7,5]))
+print("Task 8", check_number([7,6,5,6,7,5]))
