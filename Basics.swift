@@ -125,3 +125,54 @@ func check_number(_ arr: [Int]) -> Bool {
 
 print("Task 8", check_number([5,6,5,6,7,5]))
 print("Task 8", check_number([7,6,5,6,7,5]))
+
+
+// Task 9 
+// Write a Swift program to check if 5 appears as either the first or last element in a given array of integers.
+// The array length should be 1 or more
+
+func is_five (_ arr : [Int]) -> Bool {
+
+    if arr.first == 5 || arr.last == 5{
+        return true
+    }
+ 
+    return false
+}
+
+print("Task 9", is_five([5,6,5,444,5]))
+
+// Task 10
+//Write a Swift program to compute the sum of all the elements of a given array of integers
+
+func sum(_ arr : [Int]) -> Int {
+
+    let total = arr.reduce(0, +)
+    return total
+}
+
+print("Task 10", sum([5]))
+print("Task 10", sum([5,6,4]))
+
+// Task 11
+//  Write a Swift program to create a new array with the elements in reverse order of a given array of integers
+func reverse_int(_ arr : [Int]) -> [Int] {
+
+    let reverse = Array(arr.reversed())
+    return reverse
+}
+
+print("Task 11", reverse_int([5,6,4]))
+
+
+// Task 12 
+// Write a Swift program to compute the sum of the first 2 elements of a given array of integers.
+
+func sum_two(_ arr : [Int]) -> Int {
+
+    let slice = arr[0..<2]
+    let sum = slice.reduce(0,+)
+    return sum
+}
+
+print("Task 12", sum_two([5,6,4]))
