@@ -176,3 +176,37 @@ func sum_two(_ arr : [Int]) -> Int {
 }
 
 print("Task 12", sum_two([5,6,4]))
+
+// Task 13
+// Write a Swift program to create a new array of length 2 containing the first and last elements from a given array of integers.
+// The given array length must be 1 or more
+
+func new_arr(_ arr : [Int]) -> [Int] {
+
+    var new_arr: [Int] = []
+
+    new_arr.append(arr[0])
+    new_arr.append(arr.last!)
+    return new_arr
+
+}
+
+print("Task 13", new_arr([5,6,4]))
+
+
+// Task 14
+// Write a Swift program to test if an array of length four containing all their elements from two given array (each length two) of integers,
+
+func double_arr(_ a: [Int], _ b: [Int]) -> [Int] {
+    var new_arr: [Int] = []
+    new_arr.append(contentsOf: a)
+    new_arr.append(contentsOf: b)
+
+    return new_arr
+
+}
+
+print("Task 14", double_arr([5,6], [7,8]))
+
+
+
