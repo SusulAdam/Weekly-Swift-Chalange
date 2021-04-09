@@ -209,4 +209,22 @@ func double_arr(_ a: [Int], _ b: [Int]) -> [Int] {
 print("Task 14", double_arr([5,6], [7,8]))
 
 
+// Task 15 
+// Write a Swift program to move the last two characters of a given string to the start. The given string length must be at least 2.
+
+
+func remove_last_two_ch(_ string: String) -> String{
+
+    var char = string
+    let last_char = char.removeLast()
+    let second_last_char = char.removeLast()
+    char.insert( last_char, at: char.startIndex)
+    char.insert( second_last_char, at: char.startIndex)
+    return String(char)
+
+}
+
+print("Task 15", remove_last_two_ch("Adam") )
+
+
 
